@@ -1,0 +1,49 @@
+package practice;
+import java.util.*;
+import java.io.*;
+
+public class Sample1{
+
+public static void main(String args[])throws IOException{
+String content = new String();
+int count=1;
+BufferedReader reader = new BufferedReader(new FileReader("/home/admin1/Documents/Sample.txt"));
+String[] words=null;
+LinkedList<String> list = new LinkedList<String>();
+
+ try {
+	   while((content = reader.readLine())!= null)  
+       {
+		   {
+		         words=content.split(" ");  //Split the word using space
+		          for (String word : words) 
+		          {
+		                 if (word.equals(input))   //Search for the given word
+		                 {
+		                   count++;    //If Present increase the count by one
+		                 }
+		          }
+		      }
+               list.add(content);
+
+          }
+       }
+	   }
+catch(FileNotFoundException fnf){
+fnf.printStackTrace();
+}
+catch (Exception e) {
+e.printStackTrace();
+System.out.println("\nProgram terminated Safely...");
+}
+
+Collections.reverse(list);
+Iterator<String> i = list.iterator();
+while (i.hasNext()) {
+System.out.print("Node " + (count++) + " : ");
+System.out.println(i.next());
+}
+ }
+ 
+}
+

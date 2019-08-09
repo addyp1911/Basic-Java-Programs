@@ -1,0 +1,29 @@
+package practice;
+
+import practice.MyList.Node;
+
+public class Example {
+
+	public static boolean isAnagram(int p,int k) 
+	  {  
+		  while(p!=0 && k!=0)
+		  {
+			  int r1=p%10;
+			  int r2= k%10;
+			  if(r1!=r2)
+				  return false;
+			  p=p/10;
+			  k=k/10;
+		  }
+		  return true;
+	  }
+	 public static void main(String[] args) {
+		
+	
+	boolean rs=isAnagram(13,31);
+	
+	System.out.println(rs);
+	
+	
+}
+}

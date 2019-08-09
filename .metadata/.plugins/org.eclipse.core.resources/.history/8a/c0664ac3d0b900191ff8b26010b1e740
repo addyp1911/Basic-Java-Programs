@@ -1,0 +1,56 @@
+package practice;
+import java.util.*;
+import java.io.*;
+
+public class Sample1{
+
+public static void main(String args[])throws IOException{
+	Scanner sc= new Scanner(System.in);
+String content = new String();
+int count=1;
+BufferedReader reader = new BufferedReader(new FileReader("/home/admin1/Documents/Sample.txt"));
+String[] words=null;
+LinkedList<String> list = new LinkedList<String>();
+System.out.println("enter the string you want to search");
+String str=sc.next();
+
+ try {
+	   while((content = reader.readLine())!= null)  
+       {
+		  
+		         words=content.split(" ");  //Split the word using space
+		          for (String word : words) 
+		          {
+		        	  if(word.equals(str))
+		        		  list.remove(word);
+		        	  else
+		        	  list.add(word);
+		          }
+		      }
+           
+
+	   }
+catch(FileNotFoundException fnf){
+fnf.printStackTrace();
+}
+catch (Exception e) {
+e.printStackTrace();
+System.out.println("\nProgram terminated Safely...");
+}
+
+
+ List<Object> newList = new LinkedList<>();
+ for (Object obj : newList) {
+     if (obj.equals(str)) 
+         newList.remove(obj);
+         else
+         {
+        	 newList.add(str);
+        	 break;
+          }
+ }
+ System.out.println(newList);
+ }
+ 
+}
+

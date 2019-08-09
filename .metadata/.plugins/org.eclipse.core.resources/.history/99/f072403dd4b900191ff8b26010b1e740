@@ -1,0 +1,123 @@
+package practice;
+
+import java.util.*;
+import java.io.*;
+public class MyLinkedList 
+{
+ public class Node
+ {
+	 Object data;
+	 Node next;
+	 
+     public Node(Object data) 
+     {
+    	 this.data=data;
+	 
+     }
+ }
+Node head;
+
+public boolean addFirst(String s) 
+{
+	Node n= new Node(s);
+if(head==null) 
+{
+	head=n;
+	n.next=null;
+	return true;
+}
+else {
+	n.next=head;
+     head=n;
+
+}
+return true;
+}
+
+public String toString() 
+{
+	String rs=" ";
+	Node t=head;
+	while(t!= null) 
+	{
+		rs=t.data + ","+ rs;
+		t=t.next;
+	}
+	return rs;
+}
+
+public Object remove(String str) 
+{ 
+	Node t=head; 
+	if(head==null) 
+	{
+		System.out.println("list is empty");
+	}
+	else 
+	{
+		Node prev=null;
+		while(t!=null) 
+		{
+			
+			if(t.data.equals(str))
+			{	prev=t;
+				t=t.next;
+				return t.data;
+			}
+				t=t.next;
+		}
+		if(t==null) {
+			addFirst(str);
+		}
+		
+		
+	}
+	   return t.data;
+		
+		
+}
+ 
+public static void main(String args[])throws IOException{
+	Scanner sc= new Scanner(System.in);
+String content = new String();
+MyLinkedList ml=new MyLinkedList();
+BufferedReader reader = new BufferedReader(new FileReader("/home/admin1/Documents/Sample.txt"));
+String[] words=null;
+ 
+
+
+ try {
+	   while((content = reader.readLine())!= null)  
+       {
+		  
+		         words=content.split(" ");
+		         for(String s:words) 
+		         {
+		        	   ml.addFirst(s);
+		        	
+		         }
+		        
+	   }
+ }
+catch(FileNotFoundException fnf)
+ {
+fnf.printStackTrace();
+}
+catch (Exception e)
+ {
+e.printStackTrace();
+System.out.println("\nProgram terminated Safely...");
+}
+
+ System.out.println("enter the string to be searched");
+ String str=sc.next();
+ ml.addFirst(s);
+System.out.println(ml); 
+	  
+
+}
+}
+
+	 
+	
+

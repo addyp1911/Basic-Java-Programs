@@ -1,0 +1,23 @@
+package practice;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.BufferedReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Example {
+	public static void main(String[] args) throws IOException 
+{   String s="1 3 5 6 8 8";
+		Scanner sc= new Scanner(s);
+	     String st=sc.next();
+		while(st!=null) {
+			StringTokenizer stn= new StringTokenizer(st);
+			String s1=stn.nextToken();
+			System.out.println(s1);
+		}
+	
+		
+}
+}

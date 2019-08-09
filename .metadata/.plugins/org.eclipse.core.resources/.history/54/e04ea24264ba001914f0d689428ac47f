@@ -1,0 +1,15 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Example {
+	public static void main(String[] args) {
+		
+
+String s="1 2 3 4 5";
+Scanner sc= new Scanner(s);
+while(sc.hasNextInt()) {
+	System.out.println(sc.nextInt());
+}
+}
+}
