@@ -107,15 +107,15 @@ catch (Exception e)
 e.printStackTrace();
 System.out.println("\nProgram terminated Safely...");
 }
-// System.out.println(ml);
+
 
  ml.printList();
 
  System.out.println("enter the string to be searched");
  String str=sc.next();
  ml.remove(str);
-//System.out.println(ml);  
- ml.printList();
+  
+
 
 	  
 
