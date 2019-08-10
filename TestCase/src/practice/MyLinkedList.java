@@ -114,8 +114,8 @@ System.out.println("\nProgram terminated Safely...");
  System.out.println("enter the string to be searched");
  String str=sc.next();
  ml.remove(str);
-  
-
+ 
+ ml.printList();
 
 	  
 
